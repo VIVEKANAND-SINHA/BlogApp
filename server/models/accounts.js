@@ -1,10 +1,26 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var newsSchema = new Schema({
-  title: String,
-  subtitle: String,
-  // other fields...
+// User model
+const userSchema = new Schema({
+  username: String,
+  lastname: { type: String, default: "" },
+  email: { type: String, unique: true },
+  password: String,
 });
 
-mongoose.model("News", newsSchema);
+const User = mongoose.model("User", userSchema);
+
+// Post model
+const postSchema = new Schema({
+  title: String,
+  content: String,
+  author: { type: Schema.Types.ObjectId, ref: "User" },
+});
+
+const Post = mongoose.model("Post", postSchema);
+
+module.exports = {
+  User,
+  Post,
+};

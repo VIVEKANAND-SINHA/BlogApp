@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Getting Started With Python",
+    "date": "23-04-2024",
+    "image": {
+      "link": "https://ambrapaliaidata.blob.core.windows.net/ai-storage/articles/getting-started-with-python_6zc4Lcg.jpg",
+      "height": 100
+    },
+    "summary": "In this Blog you will learn about how to get started with the python language"
+  },
+  {
+    "title": "Getting Started With Python2",
+    "date": "23-04-2024",
+    "image": {
+      "link": "https://ambrapaliaidata.blob.core.windows.net/ai-storage/articles/getting-started-with-python_6zc4Lcg.jpg",
+      "height": 100
+    },
+    "summary": "In this Blog you will learn about how to get started with the python language"
+  },
+  {
+    "title": "Getting Started With Python3",
+    "date": "23-04-2024",
+    "image": {
+      "link": "https://ambrapaliaidata.blob.core.windows.net/ai-storage/articles/getting-started-with-python_6zc4Lcg.jpg",
+      "height": 100
+    },
+    "summary": "In this Blog you will learn about how to get started with the python language"
+  }
+]
