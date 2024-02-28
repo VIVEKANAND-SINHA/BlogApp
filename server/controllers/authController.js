@@ -1,6 +1,6 @@
 var authController = {};
 
-const { User, Post } = require("../models/accounts");
+const { User, Post } = require("../models/models.js");
 
 async function login(req, res, next) {
   console.log(req.body);

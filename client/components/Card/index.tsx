@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -16,6 +17,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import NonSSRWrapper from "@/components/NoSrr";
+import { Button } from "@mui/material";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -33,7 +35,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 }));
 
 export default function BlogCard({ data }: any) {
-  console.log(data, data.title);
+  // console.log(data, data.title);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -63,13 +65,21 @@ export default function BlogCard({ data }: any) {
         <CardMedia
           component="img"
           height="100"
-          image={data.image.link}
+          image={data.imagelink}
           alt="Paella dish"
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {data.summary}
           </Typography>
+          <Button
+            variant="contained"
+            href={data.path}
+            size="medium"
+            endIcon={<SendIcon />}
+          >
+            Read More
+          </Button>
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
